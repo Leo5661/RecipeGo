@@ -23,6 +23,7 @@ public class RecipesViewModel extends ViewModel {
     public MutableLiveData<List<RecipesModel>> getRecipesList(){
         return recipesList;
     }
+
     public void getRecipesCall(String cuisine, String diet, String Api_Key){
         RecipesApiInterface apiService = ApiClient.getClient().create(RecipesApiInterface.class);
         Call<List<RecipesModel>> call = apiService.getRecipes(cuisine,diet,Api_Key);
