@@ -11,6 +11,6 @@ import retrofit2.http.Query;
 public interface RecipesApiInterface {
 
     @GET("recipes/complexSearch")
-    Call<List<RecipesModel>> getRecipes(@Query("cuisine") String cuisine, @Query("diet") String diet, @Query("apiKey") String Api_key);
+    Call<ResultSchema> getRecipes(@Query("cuisine") String cuisine, @Query("diet") String diet, @Query("apiKey") String Api_key);
 
 }

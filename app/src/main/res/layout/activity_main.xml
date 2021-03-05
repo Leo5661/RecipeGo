@@ -12,17 +12,19 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="RecipeGo"
         android:layout_marginStart="10dp"
-        android:elevation="8dp"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif"
-        android:textSize="18sp"
         android:layout_marginTop="20dp"
-        android:gravity="start"/>
+        android:elevation="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="start"
+        android:padding="4dp"
+        android:text="RecipeGo"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_width="294dp"
         android:layout_height="213dp"
         android:layout_gravity="center"

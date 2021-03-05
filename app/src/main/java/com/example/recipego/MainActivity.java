@@ -3,6 +3,7 @@ package com.example.recipego;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -73,10 +74,15 @@ public class MainActivity extends AppCompatActivity {
         dietMenu.setAdapter(cuisineAdapter);
     }
 
-    private void getRecipe(){
+    private void getRecipe() {
 
         String cuisine = mCuisineText.getEditText().getText().toString();
         String diet = mDietText.getEditText().getText().toString();
+
+        Intent intent = new Intent(MainActivity.this, ShowRecipes.class);
+        intent.putExtra("cuisine", cuisine);
+        intent.putExtra("diet", diet);
+        startActivity(intent);
 
         Log.d("Log_test", "getRecipe: for cuisine: " + cuisine + " diet: " + diet);
 
