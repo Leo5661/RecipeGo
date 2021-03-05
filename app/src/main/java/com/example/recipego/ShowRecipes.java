@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.recipego.Adapter.RecipeListAdapter;
@@ -34,6 +35,7 @@ public class ShowRecipes extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recipes_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayout linearLayout = findViewById(R.id.error);
         adapter = new RecipeListAdapter(this, recipesModelList);
         recyclerView.setAdapter(adapter);
 
@@ -50,5 +52,18 @@ public class ShowRecipes extends AppCompatActivity {
             }
         });
         recipesViewModel.getRecipesCall(cuisine, diet, API_KEY);
+
+        /*if (adapter.getItemCount() == 0){
+            linearLayout.setVisibility(View.VISIBLE);
+        }
+        else {
+            linearLayout.setVisibility(View.GONE);
+        }*/
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

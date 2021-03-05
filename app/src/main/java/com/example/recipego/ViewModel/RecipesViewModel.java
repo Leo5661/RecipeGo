@@ -4,14 +4,12 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import com.example.recipego.Model.RecipesModel;
 import com.example.recipego.Network.ApiClient;
 import com.example.recipego.Network.RecipesApiInterface;
 import com.example.recipego.Network.ResultSchema;
 
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

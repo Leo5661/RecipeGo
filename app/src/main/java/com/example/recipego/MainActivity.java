@@ -56,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
         cuisineItems.add("Caribbean");
         cuisineItems.add("Eastern European");
         cuisineItems.add("Chinese");
+        cuisineItems.add("European");
+        cuisineItems.add("French");
+        cuisineItems.add("Greek");
+        cuisineItems.add("Irish");
+        cuisineItems.add("Italian");
+        cuisineItems.add("Japanese");
+        cuisineItems.add("Jewish");
+        cuisineItems.add("Mexican");
+        cuisineItems.add("Spanish");
+        cuisineItems.add("German");
 
         ArrayAdapter<String> cuisineAdapter = new ArrayAdapter(this, R.layout.list_item, cuisineItems);
         cuisineMenu.setAdapter(cuisineAdapter);
@@ -78,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         String cuisine = mCuisineText.getEditText().getText().toString();
         String diet = mDietText.getEditText().getText().toString();
+
 
         Intent intent = new Intent(MainActivity.this, ShowRecipes.class);
         intent.putExtra("cuisine", cuisine);
