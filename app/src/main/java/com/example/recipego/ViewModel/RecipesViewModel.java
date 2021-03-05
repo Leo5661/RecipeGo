@@ -1,6 +1,7 @@
 package com.example.recipego.ViewModel;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -39,6 +40,7 @@ public class RecipesViewModel extends ViewModel {
             public void onFailure(Call<ResultSchema> call, Throwable t) {
                 Log.d("Log_Test", "onFailure: the api call is failed" + " " + t.getMessage());
                 recipesList.postValue(null);
+                //Toast.makeText(, "", Toast.LENGTH_SHORT).show();
             }
         });
     }
