@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecipeGo</string>
+    <string name="delicious_foods">Delicious foods</string>
+    <string name="lets_find">Let\'s find</string>
+</resources>
